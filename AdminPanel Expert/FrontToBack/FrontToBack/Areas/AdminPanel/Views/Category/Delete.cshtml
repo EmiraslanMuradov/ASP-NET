@@ -1,0 +1,21 @@
+﻿@model Category
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<div class="col-md-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Delete Category</h4>
+            <p>
+                @Model.Name
+            </p>
+            <p>@Model.Description</p>
+            <form method="post">
+                <button type="submit" class="btn btn-danger" asp-controller="Category" asp-action="Delete" asp-route-id="@Model.Id">Delete</button>
+                <a class="btn btn-primary" asp-controller="Category" asp-action="Index">Cancel</a>
+            </form>
+        </div>
+    </div>
+</div>

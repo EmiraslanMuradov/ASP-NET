@@ -1,0 +1,22 @@
+﻿@model Expert 
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<div class="col-md-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Delete Category</h4>
+            <img src="~/img/@Model.ImageName" style="height: 100px; width: 100px;" />
+            <p>@Model.Name</p>
+            <p>@Model.Surname</p>
+            <p>@Model.Field</p>
+            <form method="post">
+                <button type="submit" class="btn btn-danger" asp-controller="Expert" asp-action="Delete" asp-route-id="@Model.Id">Delete</button>
+                <a class="btn btn-primary" asp-controller="Expert" asp-action="Index">Cancel</a>
+            </form>
+        </div>
+    </div>
+</div>
+
